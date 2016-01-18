@@ -1,3 +1,10 @@
+*   Refactor handling of `:action` default in routing so that the request's
+    `path_parameters` is not mutated when generating a route.
+
+    Fixes #23019.
+
+    *Andrew White*
+
 *   Response etags to always be weak: Prefixes 'W/' to value returned by
    `ActionDispatch::Http::Cache::Response#etag=`, such that etags set in
    `fresh_when` and `stale?` are weak.
